@@ -32,7 +32,7 @@ const Home=()=>{
             </div>
         </section>
 
-    
+
         <section className="title-card-motto">
         <div className="texts">
         <h1>TRAVEL MANIA</h1>
@@ -49,6 +49,17 @@ const Home=()=>{
         </div>
         </section>
         
+        <section className="title-card-motto">
+        <div className="texts">
+            <h1>Current Travel Plan</h1>
+            <div className="planner">
+
+            </div>
+            <div className="planner">
+
+            </div>
+            </div>
+        </section>
     </>
     )
 }
