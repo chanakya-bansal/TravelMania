@@ -1,14 +1,38 @@
 import {useState} from "react";
 import {useEffect} from "react";
 import "../styles/Home.css";
+import img1 from "../assets/images/beach.jpg";
+import img2 from "../assets/images/citylife.jpg";
+import img3 from "../assets/images/monuments.jpg";
+import img4 from "../assets/images/mountains.jpg";
+import img5 from "../assets/images/wildlife.jpg";
+const slides=[img1,img2,img3,img4,img5];
 
-
-const Home = () => {
-
-    
+const Home=()=>{
+    const[CurrentSlide,SetCurrentSlide]=useState(0);
+    useEffect(()=>{
+        const timer=setInterval(()=>{
+            SetCurrentSlide((prev)=>(prev+1)%slides.length);
+        },5000);
+        return()=>clearInterval(timer);
+    },[]);
 
     return(
     <>
+        <section className="slideshow-section">
+            <div className="slideshow-container">
+                {slides.map((src,index)=>(
+                    <div
+                            key={index}
+                            className={`slide ${index === CurrentSlide ? "active" : ""}`}
+                        >
+                        <img src={src} alt={`Destination ${index+1}`}/>
+                        </div>
+                ))}
+            </div>
+        </section>
+
+    
         <section className="title-card-motto">
         <div className="texts">
         <h1>TRAVEL MANIA</h1>
@@ -27,6 +51,6 @@ const Home = () => {
         
     </>
     )
-
 }
+
 export default Home;
