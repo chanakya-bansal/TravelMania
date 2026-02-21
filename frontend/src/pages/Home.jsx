@@ -1,66 +1,92 @@
-import {useState} from "react";
-import {useEffect} from "react";
+import { useEffect, useRef, useState } from "react";
 import "../styles/Home.css";
-import img1 from "../assets/images/beach.jpg";
-import img2 from "../assets/images/citylife.jpg";
-import img3 from "../assets/images/monuments.jpg";
-import img4 from "../assets/images/mountain2.jpg";
-import img5 from "../assets/images/wildlife.jpg";
-const slides=[img1,img2,img3,img4,img5];
-
-const Home=()=>{
-    const[CurrentSlide,SetCurrentSlide]=useState(0);
-    useEffect(()=>{
-        const timer=setInterval(()=>{
-            SetCurrentSlide((prev)=>(prev+1)%slides.length);
-        },5000);
-        return()=>clearInterval(timer);
-    },[]);
-
-    return(
-    <>
-        <section className="slideshow-section">
-            <div className="slideshow-container">
-                {slides.map((src,index)=>(
-                    <div
-                            key={index}
-                            className={`slide ${index === CurrentSlide ? "active" : ""}`}
-                        >
-                        <img src={src} alt={`Destination ${index+1}`}/>
-                        </div>
-                ))}
-            </div>
-        </section>
+import selfie from "../assets/images/selfie.svg"
+import process from "../assets/images/process.svg"
+import travelBook from "../assets/images/travel-book.svg"
+import traveler from "../assets/images/traveler.svg"
 
 
-        <section className="title-card-motto">
-        <div className="texts">
-        <h1>TRAVEL MANIA</h1>
-        <h3>Planning Made Easy...</h3>
-        <p>Travel Mania is your smart travel companion designed to help you discover the perfect destination across India.
-        Explore places based on the best season, weather, and travel preferences.
-        Whether you love mountains, beaches, heritage sites, or hidden gems, we guide you to the right spot at the right time.
-        Plan your trips effortlessly with curated recommendations and travel insights.
-        Travel Smarter and Better...with Travel Mania.</p>
-        </div>
-        <div className="buttons">
-        <button>Create your Travel Plan</button>
-        <button>Explore Travel Plans</button>
-        </div>
-        </section>
-        
-        <section className="title-card-motto">
-        <div className="texts">
-            <h1>Current Travel Plan</h1>
-            <div className="planner">
+const Home = () => {
 
-            </div>
-            <div className="planner">
+    const slides = [
+        { image: selfie, title: "Capture Memories", desc: "Every journey tells a story worth remembering." },
+        { image: process, title: "Plan Your Trip", desc: "Seamlessly organize every detail of your adventure." },
+        { image: travelBook, title: "Explore the World", desc: "Discover destinations you've always dreamed of." },
+        { image: traveler, title: "Travel Your Way", desc: "Your journey, your rules, your adventure." },
+    ];
+    const [current, setCurrent] = useState(0);
+    const titleRef = useRef();
+    const descRef = useRef();
 
-            </div>
-            </div>
-        </section>
-    </>
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrent(prev => (prev + 1) % slides.length);
+        }, 3000);
+        return () => clearInterval(timer);
+    }, []);
+
+
+    function scrambleTo(el, newText, duration = 750) {
+        const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        const steps = 20;
+        const interval = duration / steps;
+        let step = 0;
+
+        const timer = setInterval(() => {
+            el.textContent = newText
+                .split("")
+                .map((char, i) => {
+                    if (char === " ") return " ";
+                    if (i < (step / steps) * newText.length) return char;
+                    return chars[Math.floor(Math.random() * chars.length)];
+                })
+                .join("");
+
+            step++;
+            if (step > steps) {
+                el.textContent = newText;
+                clearInterval(timer);
+            }
+        }, interval);
+    }
+
+    
+    useEffect(() => {
+        scrambleTo(titleRef.current, slides[current].title);
+        scrambleTo(descRef.current, slides[current].desc);
+    }, [current]);
+
+    return (
+        <>
+            <section className="slideshow-section">
+                <div className="slide-text" key={current}>
+                    <h2 ref={titleRef} >{slides[current].title}</h2>
+                    <p ref={descRef}>{slides[current].desc}</p>
+                </div>
+                <div className="slide-image" >
+                    <img key={current} src={slides[current].image} alt={slides[current].title} />
+                </div>
+            </section>
+
+
+            <section className="title-card-motto">
+                <div className="texts">
+                    <h1>TRAVEL MANIA</h1>
+                    <h3>Planning Made Easy...</h3>
+                    <p>Travel Mania is your smart travel companion designed to help you discover the perfect destination across India.
+                        Explore places based on the best season, weather, and travel preferences.
+                        Whether you love mountains, beaches, heritage sites, or hidden gems, we guide you to the right spot at the right time.
+                        Plan your trips effortlessly with curated recommendations and travel insights.
+                        Travel Smarter and Better...with Travel Mania.</p>
+                </div>
+                <div className="buttons">
+                    <button>Create your Travel Plan</button>
+                    <button>Explore Travel Plans</button>
+                </div>
+            </section>
+
+        </>
     )
 }
 
