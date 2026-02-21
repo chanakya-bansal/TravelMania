@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=DM+Sans:wght@300;400;500&display=swap');
 
 :root {
-  --nav-bg:rgba(245, 240, 230, 0.92);
+  --nav-bg:rgba(245, 240, 230, 0.0);
   --nav-height: 72px;
   --accent: #ff6670;
- --text-light: #1a1a2e;
-  --text-muted:   #1a1a2e;
+ --text-light: #000000;
+  --text-muted:   #605c5c;
   --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
