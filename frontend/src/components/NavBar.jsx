@@ -24,19 +24,16 @@ const Navbar = () => {
           <li className={isActive("/") ? "active" : ""}>
             <Link to="/">Home</Link>
           </li>
-          <li className={isActive("/courses") ? "active" : ""}>
-            <Link to="/courses">Travel Planner</Link>
+          <li className={isActive("/travel-planner") ? "active" : ""}>
+            <Link to="/travel-planner">Travel Planner</Link>
           </li>
-          <li className={isActive("/tournaments") ? "active" : ""}>
-            <Link to="/tournaments">Tournament</Link>
+          <li className={isActive("/explore") ? "active" : ""}>
+            <Link to="/explore">Explore</Link>
           </li>
           <li className={isActive("/about") ? "active" : ""}>
             <Link to="/about">About</Link>
           </li>
-          <li className={isActive("/ranking") ? "active" : ""}>
-            <Link to="/ranking">Ranking</Link>
-          </li>
-
+       
         </ul>
       </nav>
       	
