@@ -85,6 +85,16 @@ const Home = () => {
                     <button>Explore Travel Plans</button>
                 </div>
             </section>
+            <section className="title-card-motto">
+                <div className="texts">
+                    <div className="planner">
+
+                    </div>
+                    <div className="planner">
+                        
+                    </div>
+                </div>
+            </section>
 
         </>
     )
