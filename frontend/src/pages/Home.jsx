@@ -51,7 +51,7 @@ const Home = () => {
         }, interval);
     }
 
-    
+
     useEffect(() => {
         scrambleTo(titleRef.current, slides[current].title);
         scrambleTo(descRef.current, slides[current].desc);
@@ -60,13 +60,42 @@ const Home = () => {
     return (
         <>
             <section className="slideshow-section">
-                <div className="slide-text" key={current}>
-                    <h2 ref={titleRef} >{slides[current].title}</h2>
-                    <p ref={descRef}>{slides[current].desc}</p>
+                <div className="upper">
+                    <div className="slide-text" key={current}>
+                        <h2 ref={titleRef} >{slides[current].title}</h2>
+                        <p ref={descRef}>{slides[current].desc}</p>
+                    </div>
+                    <div className="slide-image" >
+                        <img key={current} src={slides[current].image} alt={slides[current].title} />
+                    </div>
                 </div>
-                <div className="slide-image" >
-                    <img key={current} src={slides[current].image} alt={slides[current].title} />
+                <div className="marquee-wrapper">
+                    <div className="marquee-track">
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                    </div>
+                    <div className="marquee-track reverse">
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                    </div>
+                    <div className="marquee-track">
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                    </div>
+                    <div className="marquee-track reverse">
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                    </div>
                 </div>
+
             </section>
 
 
