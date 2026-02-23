@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/Home.css";
-import selfie from "../assets/images/selfie.svg"
-import process from "../assets/images/process.svg"
-import travelBook from "../assets/images/travel-book.svg"
-import traveler from "../assets/images/traveler.svg"
+import selfie from "../assets/images/capture.jpg"
+import process from "../assets/images/plan_your_trip.jpg"
+import travelBook from "../assets/images/explore.jpg"
+import traveler from "../assets/images/travel.jpg"
+import {testimonials} from "../data/homedata.js"
 
 
 const Home = () => {
@@ -22,7 +23,7 @@ const Home = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrent(prev => (prev + 1) % slides.length);
-        }, 3000);
+        }, 5000);
         return () => clearInterval(timer);
     }, []);
 
@@ -60,13 +61,12 @@ const Home = () => {
     return (
         <>
             <section className="slideshow-section">
-                <div className="upper">
+                <div className="upper"
+                key={current}
+                style={{backgroundImage:`url(${slides[current].image})`}}>
                     <div className="slide-text" key={current}>
                         <h2 ref={titleRef} >{slides[current].title}</h2>
                         <p ref={descRef}>{slides[current].desc}</p>
-                    </div>
-                    <div className="slide-image" >
-                        <img key={current} src={slides[current].image} alt={slides[current].title} />
                     </div>
                 </div>
                 <div className="marquee-wrapper">
@@ -123,6 +123,16 @@ const Home = () => {
                         
                     </div>
                 </div>
+            </section>
+            <section className="card-review">
+                {testimonials.map((t,index)=>(
+                    <div className="reviewcard" key={index}>
+                        <div className="Heading">
+                            <h3>{t.name}</h3>
+                            <p className="rating">{"⭐".repeat(t.rating)}</p>
+                        </div>
+                    </div>
+                ))}
             </section>
 
         </>
