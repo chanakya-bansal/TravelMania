@@ -116,6 +116,7 @@ const Home = () => {
             </section>
             <section className="title-card-motto">
                 <div className="texts">
+                    <h1>Current Travel Plans</h1>
                     <div className="planner">
 
                     </div>
@@ -124,15 +125,19 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="card-review">
+            <section>
+                <h1 className="review-heading">Testimonials:</h1>
+                <div className="card-review">
                 {testimonials.map((t,index)=>(
                     <div className="reviewcard" key={index}>
                         <div className="Heading">
                             <h3>{t.name}</h3>
                             <p className="rating">{"⭐".repeat(t.rating)}</p>
+                            <p className="review">{t.text}</p>
                         </div>
                     </div>
-                ))}
+                     ))}
+                </div>
             </section>
 
         </>

@@ -281,6 +281,24 @@
   animation: fadeIn 0.5s ease;
 }
 
+  /* review section */
+  .review-heading{
+    text-align:center;
+    font-size:30px;
+    margin:15px;
+  }
+  .card-review{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    margin:20px;
+  }
+  .reviewcard{
+    background:#f7f7f7;
+    border-radius:8px;
+    padding:20px;
+    text-align:center;
+  }
 
 @keyframes blurIn {
   from { 
