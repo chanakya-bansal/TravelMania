@@ -17,3 +17,24 @@ export const testimonials=[
         text:"Planned three trips this year using Travel Mania and every one was perfect. The seasonal filters are a game changer. Never going back to manual planning!"
     }
 ]
+export const textwrap=[
+    {
+        text:"EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •"
+    },
+    {
+        text:"EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •"
+    },
+    {
+        text:"EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •"
+    },
+    {
+        text:"EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •"
+    }
+
+]
+
+export const travelmania=[
+    {
+        text:"Travel Mania is your smart travel companion designed to help you discover the perfect destination across India.Explore places based on the best season, weather, and travel preferences. Whether you love mountains, beaches, heritage sites, or hidden gems, we guide you to the right spot at the right time.Plan your trips effortlessly with curated recommendations and travel insights.Travel Smarter and Better...with Travel Mania."
+    }
+]
