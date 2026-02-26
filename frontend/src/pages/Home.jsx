@@ -75,17 +75,17 @@ const Home = () => {
                     <div className="marquee-track">
                         {textwrap.map((item,index)=>(
                             <span key={index}>{item.text}</span>
-                        ))};
+                        ))}
                     </div>
                     <div className="marquee-track reverse">
                         {textwrap.map((item,index)=>(
                             <span key={index}>{item.text}</span>
-                        ))};
+                        ))}
                     </div>
                     <div className="marquee-track">
                         {textwrap.map((item,index)=>(
                             <span key={index}>{item.text}</span>
-                        ))};
+                        ))}
                     </div>
                     <div className="marquee-track reverse">
                         {textwrap.map((item,index)=>(
