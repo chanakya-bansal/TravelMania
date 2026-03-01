@@ -56,6 +56,13 @@ body.dark .review-heading {
   color: #e8e0f5;
 }
 
+/* Footer */
+body.dark .footer {
+  background-color: #030306;
+  color: #e8e0f5;
+}
+
+
 
 
 
