@@ -1,9 +1,12 @@
 import { useEffect, useRef, useState } from "react";
 import "../styles/Home.css";
-import selfie from "../assets/images/selfie.svg"
-import process from "../assets/images/process.svg"
-import travelBook from "../assets/images/travel-book.svg"
-import traveler from "../assets/images/traveler.svg"
+import selfie from "../assets/images/capture.jpg"
+import process from "../assets/images/plan_your_trip.jpg"
+import travelBook from "../assets/images/explore.jpg"
+import traveler from "../assets/images/travel.jpg"
+import {testimonials} from "../data/homedata.js"
+import {textwrap} from "../data/homedata.js"
+import {travelmania} from "../data/homedata.js"
 
 
 const Home = () => {
@@ -22,7 +25,7 @@ const Home = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrent(prev => (prev + 1) % slides.length);
-        }, 3000);
+        }, 5000);
         return () => clearInterval(timer);
     }, []);
 
@@ -60,39 +63,34 @@ const Home = () => {
     return (
         <>
             <section className="slideshow-section">
-                <div className="upper">
+                <div className="upper"
+                key={current}
+                style={{backgroundImage:`url(${slides[current].image})`}}>
                     <div className="slide-text" key={current}>
                         <h2 ref={titleRef} >{slides[current].title}</h2>
                         <p ref={descRef}>{slides[current].desc}</p>
                     </div>
-                    <div className="slide-image" >
-                        <img key={current} src={slides[current].image} alt={slides[current].title} />
-                    </div>
                 </div>
                 <div className="marquee-wrapper">
                     <div className="marquee-track">
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        {textwrap.map((item,index)=>(
+                            <span key={index}>{item.text}</span>
+                        ))};
                     </div>
                     <div className="marquee-track reverse">
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        {textwrap.map((item,index)=>(
+                            <span key={index}>{item.text}</span>
+                        ))};
                     </div>
                     <div className="marquee-track">
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
-                        <span>EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER • EXPLORE • DISCOVER • TRAVEL • ADVENTURE • WANDER •</span>
+                        {textwrap.map((item,index)=>(
+                            <span key={index}>{item.text}</span>
+                        ))};
                     </div>
                     <div className="marquee-track reverse">
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
-                        <span>DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE • DESTINATIONS • JOURNEY • ROAM • ESCAPE • EXPLORE •</span>
+                        {textwrap.map((item,index)=>(
+                            <span key={index}>{item.text}</span>
+                        ))}
                     </div>
                 </div>
 
@@ -103,11 +101,9 @@ const Home = () => {
                 <div className="texts">
                     <h1>TRAVEL MANIA</h1>
                     <h3>Planning Made Easy...</h3>
-                    <p>Travel Mania is your smart travel companion designed to help you discover the perfect destination across India.
-                        Explore places based on the best season, weather, and travel preferences.
-                        Whether you love mountains, beaches, heritage sites, or hidden gems, we guide you to the right spot at the right time.
-                        Plan your trips effortlessly with curated recommendations and travel insights.
-                        Travel Smarter and Better...with Travel Mania.</p>
+                    {travelmania.map((item,index)=>(
+                        <p key={index}>{item.text}</p>
+                    ))}
                 </div>
                 <div className="buttons">
                     <button>Create your Travel Plan</button>
@@ -116,12 +112,27 @@ const Home = () => {
             </section>
             <section className="title-card-motto">
                 <div className="texts">
+                    <h1>Current Travel Plans</h1>
                     <div className="planner">
 
                     </div>
                     <div className="planner">
                         
                     </div>
+                </div>
+            </section>
+            <section>
+                <h1 className="review-heading">Testimonials:</h1>
+                <div className="card-review">
+                {testimonials.map((item,index)=>(
+                    <div className="reviewcard" key={index}>
+                        <div className="Heading">
+                            <h3>{item.name}</h3>
+                            <p className="rating">{"⭐".repeat(item.rating)}</p>
+                            <p className="review">{item.text}</p>
+                        </div>
+                    </div>
+                     ))}
                 </div>
             </section>
 
