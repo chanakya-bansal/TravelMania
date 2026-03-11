@@ -4,9 +4,9 @@ import selfie from "../assets/images/capture.jpg"
 import process from "../assets/images/plan_your_trip.jpg"
 import travelBook from "../assets/images/explore.jpg"
 import traveler from "../assets/images/travel.jpg"
-import {testimonials} from "../data/homedata.js"
-import {textwrap} from "../data/homedata.js"
-import {travelmania} from "../data/homedata.js"
+import { testimonials } from "../data/homedata.js"
+import { textwrap } from "../data/homedata.js"
+import { travelmania } from "../data/homedata.js"
 
 
 const Home = () => {
@@ -64,8 +64,8 @@ const Home = () => {
         <>
             <section className="slideshow-section">
                 <div className="upper"
-                key={current}
-                style={{backgroundImage:`url(${slides[current].image})`}}>
+                    key={current}
+                    style={{ backgroundImage: `url(${slides[current].image})` }}>
                     <div className="slide-text" key={current}>
                         <h2 ref={titleRef} >{slides[current].title}</h2>
                         <p ref={descRef}>{slides[current].desc}</p>
@@ -73,22 +73,22 @@ const Home = () => {
                 </div>
                 <div className="marquee-wrapper">
                     <div className="marquee-track">
-                        {textwrap.map((item,index)=>(
+                        {[...textwrap, ...textwrap].map((item, index) => (
                             <span key={index}>{item.text}</span>
-                        ))};
+                        ))}
                     </div>
                     <div className="marquee-track reverse">
-                        {textwrap.map((item,index)=>(
+                        {[...textwrap, ...textwrap].map((item, index) => (
                             <span key={index}>{item.text}</span>
-                        ))};
+                        ))}
                     </div>
                     <div className="marquee-track">
-                        {textwrap.map((item,index)=>(
+                        {[...textwrap, ...textwrap].map((item, index) => (
                             <span key={index}>{item.text}</span>
-                        ))};
+                        ))}
                     </div>
                     <div className="marquee-track reverse">
-                        {textwrap.map((item,index)=>(
+                        {[...textwrap, ...textwrap].map((item, index) => (
                             <span key={index}>{item.text}</span>
                         ))}
                     </div>
@@ -101,7 +101,7 @@ const Home = () => {
                 <div className="texts">
                     <h1>TRAVEL MANIA</h1>
                     <h3>Planning Made Easy...</h3>
-                    {travelmania.map((item,index)=>(
+                    {travelmania.map((item, index) => (
                         <p key={index}>{item.text}</p>
                     ))}
                 </div>
@@ -117,22 +117,22 @@ const Home = () => {
 
                     </div>
                     <div className="planner">
-                        
+
                     </div>
                 </div>
             </section>
             <section>
                 <h1 className="review-heading">Testimonials:</h1>
                 <div className="card-review">
-                {testimonials.map((item,index)=>(
-                    <div className="reviewcard" key={index}>
-                        <div className="Heading">
-                            <h3>{item.name}</h3>
-                            <p className="rating">{"⭐".repeat(item.rating)}</p>
-                            <p className="review">{item.text}</p>
+                    {testimonials.map((item, index) => (
+                        <div className="reviewcard" key={index}>
+                            <div className="Heading">
+                                <h3>{item.name}</h3>
+                                <p className="rating">{"⭐".repeat(item.rating)}</p>
+                                <p className="review">{item.text}</p>
+                            </div>
                         </div>
-                    </div>
-                     ))}
+                    ))}
                 </div>
             </section>
 
