@@ -1,19 +1,20 @@
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
-import logo from "../assets/images/logo.png"
-import "../styles/NavBar.css"
+import { Link, useLocation } from "react-router-dom";
+import { useState } from "react";
+import logo from "../assets/images/logo.png";
+import "../styles/NavBar.css";
 
 const Navbar = () => {
   const [hidden, setHidden] = useState(false);
- 
+
   const location = useLocation();
- 
+
   const isActive = (path) =>
     path === "/" ? location.pathname === "/" : location.pathname.startsWith(path);
 
+
+
   return (
     <header className={`navbar ${hidden ? "navbar-hidden" : ""}`}>
-     
 
       <div className="logo_container">
         <img src={logo} alt="TravelMania" className="logo" />
@@ -33,11 +34,11 @@ const Navbar = () => {
           <li className={isActive("/about") ? "active" : ""}>
             <Link to="/about">About</Link>
           </li>
-       
         </ul>
       </nav>
-      	
-   
+
+
+
     </header>
   );
 };

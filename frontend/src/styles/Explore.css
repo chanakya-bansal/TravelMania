@@ -1,0 +1,168 @@
+.explore-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f7f1f2 0%,
+            #ffe4e9 40%,
+            #e8dde0 100%);
+    padding: 40px 0 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.explore-container {
+    width: 92%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.explore-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2f2a2e;
+    margin-bottom: 30px;
+}
+
+.itinerary-image-box {
+    width: 320px;
+    min-width: 320px;
+    height: 210px;
+    border-radius: 18px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.itinerary-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.itinerary-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #ead9dd;
+    border-radius: 28px;
+    padding: 22px 26px;
+    margin-bottom: 28px;
+    box-shadow: 0 6px 18px rgba(189, 160, 170, 0.12);
+}
+
+.itinerary-image-box {
+    width: 320px;
+    min-width: 320px;
+    height: 210px;
+    border-radius: 18px;
+    background: #d9d9d9;
+}
+
+.itinerary-content {
+    flex: 1;
+}
+
+.city-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #2e2a2d;
+    margin: 0 0 10px;
+}
+
+.days-text {
+    font-size: 1.2rem;
+    color: #4b4348;
+    margin: 0 0 16px;
+}
+
+.highlights-list {
+    margin: 0 0 16px 20px;
+    padding: 0;
+}
+
+.highlights-list li {
+    font-size: 1.05rem;
+    color: #4a4247;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.travel-tip {
+    font-size: 1.05rem;
+    color: #4a4247;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tip-label {
+    display: inline-block;
+    background: #a9a0a2;
+    color: white;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 10px;
+}
+
+.add-btn-box {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-btn {
+    background: #f58fa0;
+    color: white;
+    border: none;
+    border-radius: 16px;
+    padding: 16px 34px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Hover effect for itinerary cards */
+.itinerary-card {
+    transition: 0.25s ease;
+}
+
+.itinerary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(189, 160, 170, 0.18);
+}
+
+/*heading*/
+/* Header container */
+.explore-header {
+    margin-bottom: 40px;
+}
+
+/* Main title */
+.explore-title {
+    font-size: 90px;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #2f2a2e;
+    margin-bottom: 10px;
+}
+
+/* Pink underline */
+.explore-underline {
+    width: 400px;
+    height: 4px;
+    background: #f58fa0;
+    border-radius: 2px;
+    margin-bottom: 12px;
+}
+
+/* Subtitle */
+.explore-subtitle {
+    font-size: 50px;
+    letter-spacing: 2px;
+    color: #f58fa0;
+    text-transform: uppercase;
+}
