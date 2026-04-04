@@ -4,7 +4,7 @@
    OUR MOTTO SECTION
 =========================== */
 .our-motto {
-  min-height: 60vh;
+  min-height: 100vh;
   padding: 70px 10%;
   background: #fff;
   display: flex;
@@ -174,6 +174,167 @@
   letter-spacing: 1px;
   text-transform: uppercase;
 }
+
+/* ===========================
+   WHAT WE DO SECTION
+=========================== */
+.what-we-do {
+  padding: 80px 10%;
+  background: #fff5f6;
+  text-align: center;
+}
+
+.wdwd-tag {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #ff6670;
+  font-weight: 700;
+}
+
+.wdwd-heading {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.wdwd-heading span {
+  color: #ff6670;
+}
+
+.wdwd-divider {
+  width: 50px;
+  height: 4px;
+  background: #ff6670;
+  margin: 15px auto;
+}
+
+.wdwd-intro {
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.wdwd-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.wdwd-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 18px;
+  border: 1px solid #f3d6d8;
+  text-align: left;
+  transition: 0.3s;
+}
+
+.wdwd-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(255, 102, 112, 0.15);
+}
+
+.wdwd-icon {
+  width: 45px;
+  height: 45px;
+  background: #ff6670;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+/* ===========================
+   WHY US SECTION
+=========================== */
+.why-us {
+  padding: 80px 10%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+}
+
+.why-left {
+  flex: 1;
+}
+
+.why-tag {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #ff6670;
+  font-weight: 700;
+}
+
+.why-heading {
+  font-size: 36px;
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+.why-heading span {
+  color: #ff6670;
+}
+
+.why-divider {
+  width: 50px;
+  height: 4px;
+  background: #ff6670;
+  margin: 15px 0;
+}
+
+.why-intro {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.why-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.why-num {
+  background: #ff6670;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.why-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-card {
+  background: #fff5f6;
+  padding: 20px;
+  border-radius: 16px;
+  width: 200px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #ff6670;
+  letter-spacing: 2px;
+}
+
+.stat-card h3 {
+  margin: 5px 0;
+  font-size: 24px;
+}
+
 
 /* ===========================
    CONTACT SECTION
