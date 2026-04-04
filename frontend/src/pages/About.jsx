@@ -81,6 +81,109 @@ const About = () => {
         </div>
       </section>
 
+      <section className="what-we-do">
+  <p className="wdwd-tag">+ WHAT WE DO</p>
+
+  <h2 className="wdwd-heading">
+    Making Travel <span>Effortless</span>
+  </h2>
+
+  <div className="wdwd-divider"></div>
+
+  <p className="wdwd-intro">
+    From the first spark of inspiration to the moment you land — we handle every
+    layer of your travel experience.
+  </p>
+
+  <div className="wdwd-grid">
+
+    <div className="wdwd-card">
+      <div className="wdwd-icon">📍</div>
+      <h3>Curated Destinations</h3>
+      <p>Hand-picked travel spots tailored to your style.</p>
+    </div>
+
+    <div className="wdwd-card">
+      <div className="wdwd-icon">📋</div>
+      <h3>Smart Trip Planning</h3>
+      <p>Build complete itineraries with ease.</p>
+    </div>
+
+    <div className="wdwd-card">
+      <div className="wdwd-icon">✏️</div>
+      <h3>Personalised Guidance</h3>
+      <p>Recommendations based on your preferences.</p>
+    </div>
+
+    <div className="wdwd-card">
+      <div className="wdwd-icon">🛡️</div>
+      <h3>Safe & Reliable</h3>
+      <p>Trusted resources and real-time updates.</p>
+    </div>
+
+  </div>
+</section>
+
+<section className="why-us">
+
+  <div className="why-left">
+    <p className="why-tag">+ WHY US</p>
+
+    <h2 className="why-heading">
+      Your Journey, <span>Our Priority</span>
+    </h2>
+
+    <div className="why-divider"></div>
+
+    <p className="why-intro">
+      We are your planning partner — built around what real travellers need.
+    </p>
+
+    <div className="why-list">
+
+      <div className="why-item">
+        <div className="why-num">01</div>
+        <div>
+          <h4>All-in-one planning</h4>
+          <p>No more switching between apps.</p>
+        </div>
+      </div>
+
+      <div className="why-item">
+        <div className="why-num">02</div>
+        <div>
+          <h4>Built for real travellers</h4>
+          <p>Simple and intuitive experience.</p>
+        </div>
+      </div>
+
+      <div className="why-item">
+        <div className="why-num">03</div>
+        <div>
+          <h4>Always improving</h4>
+          <p>We constantly update based on feedback.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div className="why-right">
+    <div className="stat-card">
+      <p className="stat-label">DESTINATIONS</p>
+      <h3>150+</h3>
+      <p>Countries covered</p>
+    </div>
+
+    <div className="stat-card">
+      <p className="stat-label">HAPPY TRAVELLERS</p>
+      <h3>50k+</h3>
+      <p>Trips planned</p>
+    </div>
+  </div>
+
+</section>
+
       {/* CONTACT SECTION */}
       <section className="contact-the-team">
         <div className="contact-text">
