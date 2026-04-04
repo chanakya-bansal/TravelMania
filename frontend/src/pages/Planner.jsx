@@ -8,6 +8,7 @@ import Hotel from "../assets/images/hotel.png"
 import Entertainment from "../assets/images/entertainment.png"
 import Home from "../assets/images/home.png"
 import ToolBar from '../components/ToolBar';
+import BookingBar from '../components/BookingBar';
 import EditModal from '../components/EditModal';
 import TransportModal from '../components/TransportModal';
 import TravelNode from '../components/TravelNode';
@@ -196,6 +197,8 @@ export default function Planner() {
                     />
                 )}
             </div>
+
+            <BookingBar />
         </div>
     );
 }
