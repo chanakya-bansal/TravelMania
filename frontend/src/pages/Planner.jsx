@@ -49,7 +49,7 @@ const makeEdge = (id, source, target, transport = '') => ({
     label: transport || '',
     labelStyle: { fill: '#ff6670', fontWeight: 600, fontSize: 11 },
     labelBgStyle: { fill: '#fff0f0', rx: 6 },
-    labelBgPadding: [6, 4],
+    labelBgPadding: [4, 4],
     data: { transport },
 });
 
