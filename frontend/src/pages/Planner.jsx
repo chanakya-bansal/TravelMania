@@ -1,12 +1,13 @@
 import { useState, useCallback, useRef } from 'react';
-import {ReactFlow,applyNodeChanges,applyEdgeChanges,addEdge,Background,BackgroundVariant,Handle,
-    Position,BaseEdge,EdgeLabelRenderer,getBezierPath,useReactFlow,} from '@xyflow/react';
+import {ReactFlow,applyNodeChanges,applyEdgeChanges,addEdge,Background,BackgroundVariant,} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 import '../styles/Planner.css';
+
 import Restaurant from "../assets/images/restaurant.png"
 import Hotel from "../assets/images/hotel.png"
 import Entertainment from "../assets/images/entertainment.png"
 import Home from "../assets/images/home.png"
+
 import ToolBar from '../components/ToolBar';
 import BookingBar from '../components/BookingBar';
 import EditModal from '../components/EditModal';
@@ -109,8 +110,7 @@ export default function Planner() {
 
     const handleNodeSave = useCallback((id, label, note) => {
         setNodes((ns) =>
-            ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, label, note } } : n)),
-        );
+            ns.map((n) => (n.id === id ? { ...n, data: { ...n.data, label, note } } : n)), );
         setEditingNode(null);
     }, []);
 
@@ -118,10 +118,7 @@ export default function Planner() {
         setEdges((es) =>
             es.map((e) =>
                 e.id === id
-                    ? { ...e, label: transport, data: { ...e.data, transport } }
-                    : e,
-            ),
-        );
+                    ? { ...e, label: transport, data: { ...e.data, transport } } : e,), );
         setEditingEdge(null);
     }, []);
 
@@ -132,14 +129,14 @@ export default function Planner() {
                     x: window.innerWidth / 2,
                     y: window.innerHeight / 2,
                 })
-                : { x: 200 + Math.random() * 200, y: 200 + Math.random() * 200 };
+                : { x: 200+Math.random()*200,y:200+Math.random()*200 };
 
             const newNode = {
                 id: uid(),
                 type: 'travel',
                 position: {
-                    x: center.x - 85 + (Math.random() - 0.5) * 60,
-                    y: center.y - 40 + (Math.random() - 0.5) * 60,
+                    x: center.x-85+(Math.random()-0.5)*60,
+                    y: center.y-40+(Math.random()-0.5)*60,
                 },
                 data: {
                     type,

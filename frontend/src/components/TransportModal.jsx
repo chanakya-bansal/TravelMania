@@ -8,7 +8,7 @@ const TransportModal = ({ edge, onSave, onClose }) => {
     };
 
     const handleKey = (e) => {
-        if (e.key === 'Enter') { e.preventDefault(); handleSave(); }
+        if (e.key === 'Enter') handleSave(); 
         if (e.key === 'Escape') onClose();
     };
 
