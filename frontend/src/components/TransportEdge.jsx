@@ -1,9 +1,6 @@
 import { BaseEdge,EdgeLabelRenderer,getBezierPath,useReactFlow,} from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
-import { NODE_DATA } from "../pages/Planner";
-
-
 const TransportEdge = ({ id, sourceX, sourceY, targetX, targetY, sourcePosition, targetPosition, data, label, style }) => {
     const { setEdges } = useReactFlow();
     const [edgePath, labelX, labelY] = getBezierPath({ sourceX, sourceY, sourcePosition, targetX, targetY, targetPosition });
