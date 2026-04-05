@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
 import selfie from "../assets/images/capture.jpg"
 import process from "../assets/images/plan_your_trip.jpg"
 import travelBook from "../assets/images/explore.jpg"
 import traveler from "../assets/images/travel.jpg"
-import plimage from  "../assets/images/plimage.jpeg"
+import plimage from "../assets/images/plimage.png"
+import plimage2 from "../assets/images/plimage2.png"
 import { testimonials } from "../data/homedata.js"
 import { textwrap } from "../data/homedata.js"
 import { travelmania } from "../data/homedata.js"
 
 
 const Home = () => {
+    const navigate = useNavigate();
 
     const slides = [
         { image: selfie, title: "Capture Memories", desc: "Every journey tells a story worth remembering." },
@@ -107,17 +110,18 @@ const Home = () => {
                     ))}
                 </div>
                 <div className="buttons">
-                    <button>Create your Travel Plan</button>
-                    <button>Explore Travel Plans</button>
+                    <button onClick={() => navigate("/travel-planner")}>Create your Travel Plan</button>
+                    <button onClick={() => navigate("/explore")}>Explore Travel Plans</button>
                 </div>
             </section>
             <section className="title-card-motto">
                 <div className="texts">
                     <h1>Current Travel Plans</h1>
                     <div className="planner">
-                        <img src={plimage} alt="none"/>
+                        <img src={plimage} alt="none" />
                     </div>
                     <div className="planner">
+                        <img src={plimage2} alt="none" />
 
                     </div>
                 </div>

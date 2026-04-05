@@ -3,6 +3,8 @@ import "../styles/Explore.css";
 import parisImg from "../assets/images/paris.png";
 import londonImg from "../assets/images/london.jpg";
 import tokyoImg from "../assets/images/tokyo.jpg";
+import delhiImg from "../assets/images/delhi.jpg";
+import mumbaiImg from "../assets/images/mumbai.jpg";
 
 /*card component*/
 function ItineraryCard({ image, city, days, highlights, tip }) {
@@ -13,7 +15,7 @@ function ItineraryCard({ image, city, days, highlights, tip }) {
                 <img src={image} alt={city} className="itinerary-image" />
             </div>
 
-            {/* Middle text section */}
+            {/* Right text section */}
             <div className="itinerary-content">
                 <h2 className="city-title">{city}</h2>
                 <p className="days-text">{days}</p>
@@ -87,6 +89,30 @@ export default function Explore() {
                         "Ramen & sushi spots",
                     ]}
                     tip="Metro travel works best"
+                />
+
+                <ItineraryCard
+                    image={delhiImg}
+                    city="Delhi"
+                    days="3 Day Itinerary"
+                    highlights={[
+                        "India Gate & Red Fort",
+                        "Old Delhi Street Food",
+                        "Qutub Minar & Lotus Temple",
+                    ]}
+                    tip="Use the Delhi Metro (Yellow Line)"
+                />
+
+                <ItineraryCard
+                    image={mumbaiImg}
+                    city="Mumbai"
+                    days="3 Day Itinerary"
+                    highlights={[
+                        "Gateway of India & Marine Drive",
+                        "Colaba Causeway Shopping",
+                        "Bollywood Tour & Juhu Beach",
+                    ]}
+                    tip="Local trains are fastest during peak hours"
                 />
             </div>
         </div>
