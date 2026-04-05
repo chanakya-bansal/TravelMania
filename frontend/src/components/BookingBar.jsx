@@ -2,13 +2,13 @@
 import Hotel from "../assets/images/hotel.png";
 import Restaurant from "../assets/images/restaurant.png";
 import Entertainment from "../assets/images/entertainment.png";
-import Home from "../assets/images/home.png";
+import Plane from "../assets/images/plane.png";
 
 const BOOKING_ITEMS = [
-    { label: 'Hotel',         icon: Hotel,         type: 'hotel',         url: 'https://www.goibibo.com' },
-    { label: 'Restaurant',    icon: Restaurant,    type: 'restaurant',    url: 'https://www.zomato.com' },
+    { label: 'Hotel', icon: Hotel, type: 'hotel', url: 'https://www.goibibo.com' },
+    { label: 'Restaurant', icon: Restaurant, type: 'restaurant', url: 'https://www.zomato.com' },
     { label: 'Entertainment', icon: Entertainment, type: 'entertainment', url: 'https://www.district.in' },
-    { label: 'Travel',        icon: Home,          type: 'home',          url: 'https://www.makemytrip.com' },
+    { label: 'Travel', icon: Plane, type: 'home', url: 'https://www.makemytrip.com' },
 ];
 
 const BookingBar = () => (
