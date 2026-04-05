@@ -1,0 +1,62 @@
+.SignUp {
+    margin-top:100px;
+    margin-left:651px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 360px;
+    padding: 40px;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.5);
+
+}
+
+.SignUp h2 {
+    text-align: center;
+}
+
+#createAcc {
+    text-align: center;
+    color: gray;
+    font-size: 15px;
+}
+
+.inpUser, .inpEmail, .inpPass, .inpPrem {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inpPrem {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.SignUp input[type="text"],
+.SignUp input[type="email"],
+.SignUp input[type="password"] {
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    width: 100%;
+    outline: none;
+}
+
+#Signup_Button {
+    padding: 10px;
+    background-color: #ff6670;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#Signup_Button:hover {
+    background-color: #fe525e;
+    color:black;
+}

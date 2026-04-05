@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&family=Cormorant+Garamond:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Lato:wght@300;700&family=Cormorant+Garamond:wght@500&display=swap');
 
+:root { --accent: #ff6670; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 /* =====TRAVEL PLAN SECTION ==== */
 .planner {
@@ -170,37 +172,19 @@
   box-shadow: 0 4px 16px rgba(255, 102, 112, 0.15);
 }
 
-.title-card-motto .buttons button:last-child:active {
-  transform: translateY(0);
-}
+.texts { max-width: 780px; }
+h3 { font-family: 'Lato', sans-serif; font-size: 1rem; font-weight: 300; letter-spacing: .18em; text-transform: uppercase; color: var(--accent); margin-bottom: 1em; }
+h1 { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 7vw, 6rem); line-height: 1.05; color: #1a1a1a; }
+h1::after { content: ''; display: block; width: 480px; max-width: 100%; height: 5px; background: var(--accent); border-radius: 3px; margin-top: .3em; }
+p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 1.9; color: #1a1a1a; max-width: 640px; margin-top: 1.2em; }
 
-/* ===== ANIMATIONS ===== */
-@keyframes fadeSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+.buttons { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
+button { font-family: 'Lato', sans-serif; font-size: .85rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; padding: .85em 2.2em; border-radius: 3px; cursor: pointer; border: 2px solid var(--accent); transition: opacity .2s; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-outline { background: transparent; color: var(--accent); }
+button:hover { opacity: .85; }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .title-card-motto {
-    padding: 4rem 6vw 3rem;
-  }
-
-  .title-card-motto .buttons {
-    flex-direction: column;
-  }
-
-  .title-card-motto .buttons button {
-    width: 100%;
-    text-align: center;
-  }
-}
+@media (max-width: 600px) { .buttons { flex-direction: column; } button { width: 100%; } }
 
 
 .slideshow-section {

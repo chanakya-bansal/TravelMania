@@ -8,6 +8,7 @@ import About from './pages/About';
 import Explore from "./pages/Explore";
 import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
+import SignUp from './pages/SignUp';
 
 function App() {
 
@@ -15,7 +16,8 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<SignUp />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/travel-planner" element={<Planner />} />
         <Route path="/about" element={<About />} />
         <Route path="/explore" element={<Explore />} />
