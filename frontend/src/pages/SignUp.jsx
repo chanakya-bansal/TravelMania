@@ -33,7 +33,7 @@ const HandleSubmit=async(e)=>{
     });
     const data=await ress.json();
     console.log(data);
-    console.log("Everything Submitted!!");
+    console.log(data.message);
     goHome();
 
 };
