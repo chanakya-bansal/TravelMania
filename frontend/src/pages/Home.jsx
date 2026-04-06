@@ -4,6 +4,7 @@ import selfie from "../assets/images/capture.jpg"
 import process from "../assets/images/plan_your_trip.jpg"
 import travelBook from "../assets/images/explore.jpg"
 import traveler from "../assets/images/travel.jpg"
+import plimage from  "../assets/images/plimage.jpeg"
 import { testimonials } from "../data/homedata.js"
 import { textwrap } from "../data/homedata.js"
 import { travelmania } from "../data/homedata.js"
@@ -114,7 +115,7 @@ const Home = () => {
                 <div className="texts">
                     <h1>Current Travel Plans</h1>
                     <div className="planner">
-
+                        <img src={plimage} alt="none"/>
                     </div>
                     <div className="planner">
 
