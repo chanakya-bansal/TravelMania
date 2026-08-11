@@ -1,7 +1,7 @@
 
 import json
-from django.http import JsonResponse  #success msg
-from django.views.decorators.csrf import csrf_exempt  #bypassing the security csrf tokens
+from django.http import JsonResponse 
+from django.views.decorators.csrf import csrf_exempt
 from .models import USER_INFO
 # Create your views here.
 
